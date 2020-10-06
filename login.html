@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scanle=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<title>Login</title>
+	<link rel="stylesheet" href="css/style.css">
+	
+</head>
+<body>
+	
+	<form class="form" action="#">
+		<div class="card"> 
+			
+			<div class="card-top">
+				<a href="/"><img class="imglogin" src="img/logo.png" alt="login"></a>
+			</div>
+			<br/>
+				
+			<div class="card-group">
+				<label>E-mail</label>
+				<input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
+			</div>
+			
+			<div class="card-group">
+				<label>Senha</label>
+				<input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+			</div>
+			
+			<div class="card-group">
+				<label><input type="checkbox"> Continuar conectado</label>
+			</div>
+			
+			<div class="card-group">
+				<a href="esquecisenha.html" style="text-decoration: underline;">Esqueci minha senha</a>
+			</div>
+
+			<div class="card-group">
+				<a href="cadastro.html" style="text-decoration: underline;">Criar uma conta</a>
+			</div>
+
+
+			<div class="card-group btn">
+				<button type="submit" onclick="acessar()">ACESSAR</button>
+			</div>
+			
+		</div>
+	</form>
+
+	<script>
+		function acessar(){
+		let email = document.getElementById("email")
+		let senha = document.getElementById("senha") 
+        
+		if(email.value == "" && senha.value == ""){
+			window.alert("Preencha os campos abaixo para continuar!")
+		}else if(email.value == ""){
+			window.alert("Preencha o campo de Email")
+		}else if(senha.value == ""){
+			window.alert("Preencha o campo de Senha")
+		}else{
+			window.alert("Você está conectado!")
+		}
+		}
+	</script>
+	
+</body>
+</html>

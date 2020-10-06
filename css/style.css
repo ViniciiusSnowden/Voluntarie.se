@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+ 
+:root {
+    --font-primary: "baloo Da 2", serif;
+    --font-secundary: "Josefin Slab", serif;
+    --font-action: "Mulish", serif;
+}
+.hamburguer{
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.line{
+    width: 100;
+    height: .1rem;
+    background-color: #ffffff;
+    box-shadow: 0.1rem 0.1rem 1px #000000;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-wrapper{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.img-wrapper img{
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    opacity: 0.2;
+    animation: zoom 25s
+}
+@keyframes zoom{
+    0%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.banner{ 
+    position: absolute;
+    top: 30%;
+    left: 15%;
+}
+
+.banner p{
+    margin-bottom: 0rem;
+    color: #ffffff;
+    font-size: 4.5rem;
+    font-family: var(--font-secundary);
+    text-shadow: .2rem .3rem 2px rgba(0,0,0,.4);
+    opacity: 0;
+    animation: moveBanner 1s 0.5s forwards;
+}
+
+.banner h1{
+    color: #ffffff;
+    font-size: 7.5rem;
+    font-family: var(--font-primary);
+    text-shadow: .2rem .3rem 2px rgba(0,0,0,.4);
+    margin-bottom: 3rem;
+    opacity: 0;
+    animation: moveBanner 1s 0.7s forwards;
+}
+
+.banner .botao1{
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-family: var(--font-action);
+    background: #ca2700;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    animation: moveBanner 1s 0.9s forwards;
+    text-decoration: none;
+}
+
+.banner .botao2{
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-family: var(--font-action);
+    background: none;
+    padding: 1rem 3rem;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    cursor: pointer;
+    animation: moveBanner 1s 0.9s forwards;
+    text-decoration: none;
+}
+
+.banner a:hover{
+    color: #000000;
+}
+
+@keyframes moveBanner{
+    0%{
+        transform: translateY(10rem) rotateY(-30deg);
+    }
+    100%{
+        transform: translateY(0) rotateY(0);
+        opacity: 1;
+    }
+
+}
+
+.sidebar{
+    width: 20rem;
+    height: 100vh;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    right: -20rem;
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+.sidebar.show-menu{
+    right:  0;
+}
+
+.menu{
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    transform: translateX(-50%, -50%);
+}
+
+.menu-item{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.menu-link{
+    font-family: var(--font-action);
+    font-size: 2rem;
+    color: #555;    
+    transition: color 1s;
+}
+
+.menu-link:hover{
+    color: #ca2700;
+}
+
+.social-media{
+    
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social-media i{
+    background-color: #ca2700; 
+    color: #ffffff;
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 1s;
+}
+
+.social-media i:hover{
+    background-color: rgba(0, 0, 0, .8);
+}
+/*Sobre nós*/
+.conhecimentos {
+    display: grid;
+    grid-template-columns: repeat(16,1fr);
+    grid-template-rows: repeat(6, 8rem);
+    row-gap: .5rem;
+}
+
+.conhecimento:nth-child(1) {
+    grid-column: 4 / 7;
+    grid-row: 1 / 3;
+}
+
+.conhecimento:nth-child(2) {
+    grid-column: 3 / 6;
+    grid-row: 3 / 5;
+}
+
+.conhecimento:nth-child(3) {
+    grid-column: 4 / 7;
+    grid-row: 5 / -1;
+}
+
+.conhecimento:nth-child(4) {
+    grid-column: 11 / 14;
+    grid-row: 1 / 3;
+}
+
+.conhecimento:nth-child(5) {
+    grid-column: 12 / 15;
+    grid-row: 3 / 5;
+}
+
+.conhecimento:nth-child(6) {
+    grid-column: 11 / 14;
+    grid-row: 5 / -1;
+}
+
+.sessao-conhecimentos {
+    background-color: #f5f5f5f5;
+}
+
+.sessao-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sessao-header h1 {
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    color: #4b4b4b;
+    border-bottom: solid 2px #6a30937e;
+    margin-bottom: 1.5rem;
+}
+
+.conhecimento-header {
+    display: flex;
+    align-items: center;
+}
+
+.conhecimento-header i {
+    font-size: 2.5rem;
+}
+
+.conhecimento-header h3 {
+    font-family: var(--font-secundary);
+    font-size: 2rem;
+    padding-left: 1rem;
+}
+
+.conhecimento-text {
+    font-family: var(--font-secundary);
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.conhecimentos-img-wrapper {
+    margin-top: 80px;
+    grid-column: 7 / 11;
+    grid-row: 2 / 7;
+    width: 100%;
+}
+
+.conhecimentos-img-wrapper img {
+    object-fit: cover;
+    width: 100%;
+}
+/* PROJETOS CARDS */
+
+.projetos {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.card {
+    width: 18rem;
+    height: 25rem;
+    position: relative;
+}
+
+.card-img-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    border-radius: .5rem;
+
+}
+
+.card-img-wrapper img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: .5-rem;
+    opacity: .8;
+    transition: opacity .3s;
+
+}
+
+.card:hover .card-img-wrapper img {
+    opacity: .5;
+}
+
+.card-info {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute; 
+    bottom: 0;
+    padding: 2rem;
+    text-shadow: 0.3rem 0.2rem 0.3rem rgba(0,0,0,0.6);
+    transition: all .3s;
+}
+
+.card-info h2 {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: 500;
+    color: #eee;
+}
+
+.card-info h3 {
+    font-family: var(--font-secundary);
+    font-weight: bolder;
+    color: #ff4081;
+    margin-bottom: 1.5rem;
+}
+
+.card-info p {
+    font-family: var(--font-secundary);
+    color: #eee;
+    font-weight: 400;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background: #ad5389; 
+    background: -webkit-linear-gradient(to right, #3c1053, #ad5389); 
+    background: linear-gradient(to right, #3c1053, #ad5389); 
+    font-family: var(--font-action);
+    color: #eee;
+    border-radius: .5rem;
+    border: none;
+    box-shadow: 0 .1rem .8rem rgba(0,0,0, .4);
+    cursor: pointer;
+}
+
+.card-info button {
+    width: 8rem;
+    height: 2.5rem;
+    background: #ad5389; 
+    background: -webkit-linear-gradient(to right, #3c1053, #ad5389); 
+    background: linear-gradient(to right, #3c1053, #ad5389); 
+    font-family: var(--font-action);
+    color: #eee;
+    border-radius: .5rem;
+    border: none;
+    box-shadow: 0 .1rem .8rem rgba(0,0,0, .4);
+    cursor: pointer;
+
+}
+
+.card:hover .card-info {
+    bottom: 2rem;
+    opacity: 1;
+    visibility: visible;
+}
+
+.sessao-contato {
+    width: 100%;
+    height: 100vh;
+    background-color: #242424;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../img/body.png');
+}
+
+.contato-wrapper {
+    width: 60%;
+    height: 30rem;
+    display: flex;
+    box-shadow: 0 2rem 3rem rgba(0,0,0,0.5);
+
+} 
+
+.contato-left {
+    width: 35%;
+    background: linear-gradient(rgba(15,15,15, 0.6), rgba(22,22,22,0.9)), url('../img/body.png');
+    background-size: cover;
+    background-color:#242424;
+}
+
+.contato-right {
+    width: 65%;
+    background-color: #fff;
+    padding: 1rem 3rem 3rem 3rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.385);
+}
+
+.sessao-contato h1 {
+    font-family: var(--font-primary);
+    text-align: center;
+    color: #272727;
+    font-size: 3rem;
+    font-weight: lighter;
+}
+
+.sessao-contato form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group {
+    position: relative;
+}
+
+.field {
+    background: transparent;
+    border: none;
+    width: 20rem;
+    font-size: 1.5rem;
+    font-family: var(--font-secundary);
+    border-bottom: 2px dashed #636363;    
+    height: 3rem;
+    outline: none;
+    margin: 1rem 0;
+
+}
+
+.input-group textarea{
+    padding-top: 1rem;
+    max-width: 25rem;
+    max-height: 3rem;
+
+}
+
+.field-label {
+    position: absolute;
+    left: 0;
+    top: 2rem;
+    font-size: 1rem;
+    font-family: var(--font-secundary);
+    text-transform: uppercase;
+    transition: all 0.3s;
+  }
+  
+  .field:focus ~ label {
+    top: 0;
+    font-size: 0.7rem;
+  }
+  
+  .field:focus {
+    border-bottom: 1px solid;
+  }
+
+  .btn-submit {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    width: 80%;
+    height: 2.5rem;
+    margin-top: 1rem;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+    text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+    background-image: linear-gradient(to right, #CA2700, #5a0c14);
+  }
+
+/*css login */
+
+body{
+	background-color: #CA2700;
+	font-family: arial;
+	background-image: url("../img/body.png")
+}
+
+.form{
+	width: 400px;
+	margin: auto;
+	padding-top: 40px;
+}
+
+.card{
+	box-shadow: 1px 1px 5px #ccc;
+	background-color: #fff;
+	padding: 30px;
+	border-radius: 5px;
+}
+
+.card-top{
+	text-align: center;
+}
+
+.card-group{
+	margin-bottom: 10px;
+}
+
+.card-group > label{
+	width: 100%;
+	color: rgb(75, 75, 75);
+	display: block; 	
+}
+
+.card-group > input{
+	border-radius: 5px;
+	outline: 0;
+	width: 100%;
+	height: 25px;
+	padding: 5px;
+}
+
+.card-group > button{
+	background-image: linear-gradient(to right, #CA2700, #5a0c14);
+	width: 100%;
+	border-radius: 30px;
+	padding: 15px;
+	color: #ffffff;
+	border: 0px;
+	outline: 0;
+	margin-top: 10px;
+}
+
+.btn button:hover{
+	background-image: linear-gradient(to right, #5a0c14, #CA2700);
+}
+
+#pagInicial{
+	margin-top: 10px;
+	text-align: center;
+}
+
+.imglogin{
+	width: 200px;
+}
+
+.title{ 
+	color: #CA2700;
+}
+
+a {
+    color: #000000;
+    
+}
+
