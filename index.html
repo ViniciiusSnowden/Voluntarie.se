@@ -3,50 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voluntarie.se</title>
     <link rel="stylesheet" href="css/style.css">
+    <title>Voluntarie.se | Bem-vindo ao Voluntarie</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
 </head>
 <body>
-
     <div class="container">
+        <div class="hamburguer">
+            <div class="line" id="line1"></div>
+            <div class="line" id="line2"></div>
+            <div class="line" id="line3"></div>
+        </div>
+
         <header>
-
-            <div class="hamburguer">
-                <div class="line" id="line1"></div>
-                <div class="line" id="line2"></div>
-                <div class="line" id="line3"></div>
-            </div>
-
             <div class="img-wrapper">
-                <img src="img/holding_hands.jpg" alt="">
-            </div>
+                <img src="img/bg.jpg" alt="">
+            </div>            
             <div class="banner">
-                <p>Bem-vindo ao</p>
-                <h1>Voluntarie.se</h1>
-                <span class="botao1"><a href="login.html" style="text-decoration: none; color: #ffffff;">Login</a></span>
-                <span class="botao2"><a href="cadastro.html" style="text-decoration: none; color:#ffffff;">Criar Conta</a></span>
+            <h1>Voluntarie<strong style="color:#f83600;">.</strong>se</h1>
+            <p>Uma nova maneira de fazer o bem.</p>
+            <a href="login.html"><button>Entrar</button></a> 
+            <a href="cadastro.html"><button style="color: #ffffff; text-transform: uppercase; font-family: var(--font-action); background: none; border: 1px solid #ffffff; border-radius: 30px; cursor: pointer; animation: moveBanner 1s 0.9s forwards; text-decoration: none;">Criar conta</button></a>
             </div>
         </header>
-
-        <div class="sidebar">
+        <aside class="sidebar">
             <nav>
                 <ul class="menu">
-                    <li class="menu-item"><a href="#" class="menu-link">Página inicial</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Sobre nós</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Ações</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Contato</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Suporte</a></li>
+                    <li class="menu-item"><a href="#" class="menu-link">Início</a></li>
+                    <li class="menu-item"><a href="#sobre" class="menu-link">Sobre</a></li>
+                    <li class="menu-item"><a href="#acoes" class="menu-link">Ações</a></li>
+                    <li class="menu-item"><a href="#contato" class="menu-link">Contato</a></li>
+                    <li class="menu-item"><a href="login.html" class="menu-link">Login</a></li>
                 </ul>
             </nav>
             <div class="social-media">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-github-alt"></i></a>
+                <a href=""><i class="fab fa-facebook"></i></a>
+                <a href=""><i class="fab fa-github"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
             </div>
-        </div>
-        <section class="sessao-conhecimentos">
+        </aside>
+        <section class="sessao-conhecimentos" id="sobre">
             <div class="sessao-header">
-                <h1>Conhecimentos</h1>
+                <h1>Como funciona?</h1>
             </div>
             <div class="conhecimentos">
                 <div class="conhecimento">
@@ -108,47 +109,48 @@
                 </div>
             </div>
         </section>
-        <section class="sessao-projetos">
+
+        <section class="sessao-projetos" id="acoes" style="background: white;">
             <div class="sessao-header">
-                <h1>Projetos</h1>
+                <h1>Últimas ações</h1>
             </div>
             <div class="projetos">
                 <div class="card">
                     <div class="card-img-wrapper">
-                        <img src="img/acaoSocial1.jpg" alt="Pojeto ToDo">
+                        <img src="img/proj1.jpg" alt="Pojeto ToDo">
                     </div>
                     <div class="card-info">
                         <h2>ToDo List</h2>
                         <h3>JavaScript</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus mollitia sequi, deleniti cum nobis quae, quam saepe tenetur commodi velit natus voluptate, excepturi illum fugiat laudantium voluptas consectetur. Excepturi, consequuntur?</p>
-                        <button>Saiba mais</button>
+                        <button>Participar</button>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-img-wrapper">
-                        <img src="img/acaoSocial2.jpg" alt="Projeto Maratona">
+                        <img src="img/proj2.jpg" alt="Projeto Maratona">
                     </div>
                     <div class="card-info">
                         <h2>Maratona</h2>
                         <h3>HTML, CSS</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quibusdam vero possimus ea illum tempora culpa! Iure, aspernatur nemo quasi repellendus deserunt placeat cupiditate repudiandae voluptates odio aliquam similique voluptate.</p>
-                        <button>Saiba mais</button>
+                        <button>Participar</button>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-img-wrapper">
-                        <img src="img/acaoSocial3.jpg" alt="Projeto Casa Bela">
+                        <img src="img/proj3.jpg" alt="Projeto Casa Bela">
                     </div>
                     <div class="card-info">
                         <h2>Casa Bela</h2>
                         <h3>HTML</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem quas qui dolores accusantium ipsa consectetur commodi debitis, quaerat vitae fugiat incidunt quibusdam sed recusandae facilis non obcaecati unde nostrum iusto.</p>
-                        <button>Saiba mais</button>
+                        <button>Participar</button>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="sessao-contato">
+        <section class="sessao-contato" id="contato">
             <div class="contato-wrapper">
                 <div class="contato-left"></div>
                 <div class="contato-right">
@@ -166,14 +168,12 @@
                             <textarea class="field" id="mensagem"></textarea>
                             <label for="mensagem" class="field-label">Mensagem</label>
                         </div>
-                        <button type="submit" class="btn btn-submit">Enviar</button>
+                        <button type="submit" class="bt bt-submit">Enviar</button>
                     </form>
                 </div>
             </div>
         </section>
     </div>
-
 </body>
-
 <script src="js/script.js"></script>
 </html>
